@@ -10,12 +10,12 @@ int main(void) {
   int upper = 300; /* upper limit */
   int step = 20;   /* step size */
 
-  printf("%10s %7s\n", "Fahrenheit", "Celsius");
+  printf("%10s %7s\n", "Celsius", "Fahrenheit");
 
-  fahr = lower;
-  while (fahr <= upper) {
-    celsius = (5.0 / 9.0) * (fahr - 32.0);
-    printf("%10.0f %7.1f\n", fahr, celsius);
-    fahr += step;
+  celsius = lower;
+  while (celsius <= upper) {
+    fahr = celsius / (5.0 / 9.0) + 32.0;
+    printf("%7.0f %10.1f\n", celsius, fahr);
+    celsius += step;
   }
 }
