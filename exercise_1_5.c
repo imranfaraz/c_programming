@@ -8,7 +8,6 @@
 #define STEP 20
 
 int main(void) {
-
   printf("%10s %7s\n", "Fahrenheit", "Celsius");
 
   for (int fahr = UPPER; fahr >= LOWER; fahr -= STEP) {
