@@ -10,7 +10,7 @@ int main(void) {
   int upper = 300; /* upper limit */
   int step = 20;   /* step size */
 
-  printf("%10s %7s\n", "Celsius", "Fahrenheit");
+  printf("%7s %10s\n", "Celsius", "Fahrenheit");
 
   celsius = lower;
   while (celsius <= upper) {
