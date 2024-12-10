@@ -8,12 +8,12 @@ int main(void) {
   while ((c = getchar()) != EOF) {
     if (c == ' ') {
       if (prevBlank) continue;
-      putchar(c);
       prevBlank = true;
     } else {
-      putchar(c);
       prevBlank = false;
     }
+
+    putchar(c);
   }
 
   return 0;
