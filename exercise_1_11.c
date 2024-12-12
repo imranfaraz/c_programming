@@ -1,4 +1,3 @@
-#include <stdbool.h>
 #include <stdio.h>
 
 #define IN 1  /* inside a word */
