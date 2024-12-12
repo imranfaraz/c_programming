@@ -1,22 +1,20 @@
+#include <stdbool.h>
 #include <stdio.h>
 
-#define IN 1  /* inside a word */
-#define OUT 0 /* outside a word */
-
 int main(void) {
-  int c, numLines, numWords, numChars, state;
-
-  state = OUT;
+  int c, numLines, numWords, numChars;
   numLines = numWords = numChars = 0;
+
+  bool isWord = false;  // is current character part of a word?
 
   while ((c = getchar()) != EOF) {
     numChars++;
     if (c == '\n') numLines++;
 
     if ((c == ' ') || (c == '\n') || (c == '\t')) {
-      state = OUT;
-    } else if (state == OUT) {
-      state = IN;
+      isWord = false;
+    } else if (!isWord) {
+      isWord = true;
       numWords++;
     }
   }
