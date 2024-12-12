@@ -6,11 +6,10 @@ int main(void) {
   bool isWord = false;  // is current character part of a word?
 
   while ((c = getchar()) != EOF) {
-    if ((c == ' ') || (c == '\n') || (c == '\t')) {
+    if ((c == ' ') || (c == '\n') || (c == '\t'))
       isWord = false;
-    } else if (!isWord) {
+    else if (!isWord)
       isWord = true;
-    }
 
     if (isWord)
       printf("%c", c);
