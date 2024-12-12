@@ -5,7 +5,6 @@
 
 int main(void) {
   int c, wordLen = 0;
-
   int wordLenTracker[MAX_WORD_LEN] = {0};
 
   while ((c = getchar()) != EOF) {
