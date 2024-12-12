@@ -1,7 +1,7 @@
 #include <stdbool.h>
 #include <stdio.h>
 
-// defines the range of printable ASCII characters
+// specifies the range of printable ASCII characters
 #define ASCII_MIN 33
 #define ASCII_MAX 126
 
