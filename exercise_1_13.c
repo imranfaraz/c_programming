@@ -10,17 +10,22 @@ int main(void) {
   for (int i = 0; i < MAX_WORD_LEN; i++) wordLenTracker[i] = 0;
 
   while ((c = getchar()) != EOF) {
-    if ((wordLen > 0) && ((c == ' ') || (c == '\n') || (c == '\t'))) {
-      wordLenTracker[wordLen - 1]++;
-      wordLen = 0;
+    if ((c == ' ') || (c == '\n') || (c == '\t')) {
+      if (wordLen > 0) {
+        wordLenTracker[wordLen - 1]++;
+        wordLen = 0;
+      }
     } else {
       wordLen++;
     }
   }
 
-  for (int i = 0; i < MAX_WORD_LEN; i++)
-    if (wordLenTracker[i] != 0)
-      printf("length %d: %d\n", (i + 1), wordLenTracker[i]);
+  for (int i = 0; i < MAX_WORD_LEN; i++) {
+    printf("length %2d: ", (i + 1));
+    wordLen = wordLenTracker[i];
+    for (int j = 0; j < wordLen; j++) printf("#");
+    printf(" (%d)\n", wordLen);
+  }
 
   return 0;
 }
